@@ -6,10 +6,15 @@ const ulEl = document.getElementById("ul-el");
 inputBtn.addEventListener("click", function () {
   myLeads.push(inputEl.value);
   console.log(myLeads);
+  renderLeads();
+  inputEl.value = "";
 });
 
-for (let i = 0; i < myLeads.length; i++) {
-  const liEl = document.createElement("li");
-  liEl.textContent = myLeads[i];
-  ulEl.appendChild(liEl);
+// render leads in list format
+function renderLeads() {
+  for (let i = 0; i < myLeads.length; i++) {
+    const liEl = document.createElement("li");
+    liEl.textContent = myLeads[i];
+    ulEl.appendChild(liEl);
+  }
 }

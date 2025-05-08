@@ -1,4 +1,4 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
@@ -12,9 +12,9 @@ inputBtn.addEventListener("click", function () {
 
 // render leads in list format
 function renderLeads() {
+  let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
-    const liEl = document.createElement("li");
-    liEl.textContent = myLeads[i];
-    ulEl.appendChild(liEl);
+    listItems += `<li><a target=_blank href=${myLeads[i]} </a>${myLeads[i]}</li>`;
   }
+  ulEl.innerHTML = listItems;
 }

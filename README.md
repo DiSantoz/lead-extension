@@ -1,4 +1,4 @@
-# [Lead Extension]
+# Lead Extension
 
 A Google Chrome Exentension useful for saving links through user input or saving the current tab you are viewing. No need to have endless bookmarks, now you can save links with ease.
 
